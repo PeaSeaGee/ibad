@@ -1,0 +1,10 @@
+body{
+    padding: 0 20px;
+}
+
+.navbar{
+    background-color: #3b291e;
+    color: #fff;
+    border-bottom: 5px solid #6aa530;
+    padding: 10px;
+}
