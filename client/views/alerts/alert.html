@@ -14,13 +14,13 @@
 			{{text}} &mdash;{{name}} @ {{time}}
 		</div>
 		{{/each}}
-		<form id={{_id}}>
-			<textarea id="name" placeholder="Name..." rows="1"></textarea>
+		<div>
+			<textarea id="alert_{{_id}}_comment_name" class="comment_name" placeholder="Name..." rows="1"></textarea>
 			<br />
-			<textarea id="text" placeholder="Comment..."></textarea>
+			<textarea id="alert_{{_id}}_comment_text" class="comment_text" placeholder="Comment..."></textarea>
 			<br />
-			<input type="submit">
-		</form>
+			<input class="post_comment" type="button" value="Post" />
+		</div>
 	</div>
 	</div>
 	{{/each}}

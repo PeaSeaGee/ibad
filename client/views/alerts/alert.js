@@ -37,25 +37,20 @@ Template.alert.comment = function() {
 };
 
 Template.alert.events({
-	'click input.ack': function(){
+	'click input.ack': function() {
 		Alerts.update({_id:this._id}, {$set:{isAck:true, whenAck:new Date}})
 	},
-	'click input.unack': function(){
-		Alerts.update({_id:this._id}, {$set:{isAck:false, whenAck: null}})
+	'click input.unack': function() {
+		Alerts.update({_id:this._id}, {$set:{isAck:false, whenAck:null}})
 	},
-	
-	'submit': function(e, template){
-		e.preventDefault(); //stops loading page
-		var $name = $(e.target.find('[name=name]'));
-		var $text = $(e.target.find('[name=text]'));
-		var comment={
-			text:$text.val, 
-			name:$name.val(), 
-			time: new Date()
-		};
-		Alerts.update({_id:this._id},{$push:{comment:comment}})
+	'click input.post_comment': function() {
+	    var comment_name_elt = document.getElementById("alert_" + this._id + "_comment_name");
+	    var comment_text_elt = document.getElementById("alert_" + this._id + "_comment_text");
+		var comment = {text: comment_text_elt.value, name: comment_name_elt.value, time: new Date()};
+		comment_name_elt.value = '';
+		comment_text_elt.value = '';
+		Alerts.update({_id:this._id},{$push:{comment: comment}});
 	}
-	
 });
 
 Template.sorter.events({
