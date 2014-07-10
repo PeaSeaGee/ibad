@@ -60,22 +60,22 @@ Template.alert.events({
 
 Template.sorter.events({
 	'click input.timeAsc': function(){
-		Session.set("orderby","timeAsc")
+		Session.set("orderby","timeAsc");
 	},
 	'click input.timeDsc': function(){
-		Session.set("orderby","timeDsc")
+		Session.set("orderby","timeDsc");
 	},
 	'click input.typeAsc': function(){
-		Session.set("orderby","typeAsc")
+		Session.set("orderby","typeAsc");
 	},
 	'click input.typeDsc': function(){
-		Session.set("orderby","typeDsc")
+		Session.set("orderby","typeDsc");
 	},
 	'click input.grpAsc': function(){
-		Session.set("orderby","grpAsc")
+		Session.set("orderby","grpAsc");
 	},
 	'click input.grpDsc': function(){
-		Session.set("orderby","grpDsc")
+		Session.set("orderby","grpDsc");
 	}
 });
 
