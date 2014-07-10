@@ -5,10 +5,10 @@
 	<span class="onealertlinks">
 		<a href="https://mms.mongodb.com/backup/dashboard/{{mmsId}}">MMS</a> 
 		<a href="https://brsnoc.10gen.com/view_group?id={{mmsId}}">NOC</a> 
-		Comments
+		<a href="#" class="toggleComments">Comments ({{comment.length}})</a>
 		{{>ack}}
 	</span>
-	<div class="commentwrap">
+	<div class="commentwrap" id="comments_{{this._id}}">
 		{{#each comment}}
 		<div>
 			{{text}} &mdash;{{name}} @ {{time}}

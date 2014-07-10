@@ -44,12 +44,19 @@ Template.alert.events({
 		Alerts.update({_id:this._id}, {$set:{isAck:false, whenAck:null}})
 	},
 	'click input.post_comment': function() {
-	    var comment_name_elt = document.getElementById("alert_" + this._id + "_comment_name");
-	    var comment_text_elt = document.getElementById("alert_" + this._id + "_comment_text");
+	  var comment_name_elt = document.getElementById("alert_" + this._id + "_comment_name");
+	  var comment_text_elt = document.getElementById("alert_" + this._id + "_comment_text");
 		var comment = {text: comment_text_elt.value, name: comment_name_elt.value, time: new Date()};
 		comment_name_elt.value = '';
 		comment_text_elt.value = '';
 		Alerts.update({_id:this._id},{$push:{comment: comment}});
+	},
+	'click a.toggleComments': function() {
+		currentVisStyle = document.getElementById("comments_" + this._id).style;
+		if (currentVisStyle.display != "block")
+			currentVisStyle.display="block";
+		else
+			currentVisStyle.display="none";
 	}
 });
 
