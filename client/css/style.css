@@ -8,3 +8,10 @@ body{
     border-bottom: 5px solid #6aa530;
     padding: 0px 10px;
 }
+
+.onealertlinks { float:right; }
+
+.mmsalert {
+	border: 1px solid #ddd;
+	padding: 10px;
+}
