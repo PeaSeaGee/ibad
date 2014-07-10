@@ -3,26 +3,26 @@ Template.alert.alerts = function() {
 		Session.set("orderby", "timeDsc")
 	switch (Session.get("orderby")) {
 		case "timeAsc":
-			answer = Alerts.find({},{sort:{time:1}});
+			answer = Alerts.find({isAck:false},{sort:{time:1}});
 			break;
 		case "timeDsc":
-			answer = Alerts.find({},{sort:{time:-1}});
+			answer = Alerts.find({isAck:false},{sort:{time:-1}});
 			break;
 		case "grpAsc":
-			answer = Alerts.find({},{sort:{group:1}});
+			answer = Alerts.find({isAck:false},{sort:{group:1}});
 			break;
 		case "grpDsc":
-			answer = Alerts.find({},{sort:{group:-1}});
+			answer = Alerts.find({isAck:false},{sort:{group:-1}});
 			break;
 		case "typeAsc":
-			answer = Alerts.find({},{sort:{type:1}});
+			answer = Alerts.find({isAck:false},{sort:{type:1}});
 			break;
 		case "typeDsc":
-			answer = Alerts.find({},{sort:{type:-1}});
+			answer = Alerts.find({isAck:false},{sort:{type:-1}});
 			break;
 		default:
 			Session.set("orderby", "timeDsc");
-			answer = Alerts.find({},{sort:{time:-1}});
+			answer = Alerts.find({isAck:false},{sort:{time:-1}});
 			break;
 		}
 	return answer;
