@@ -1,0 +1,17 @@
+<template name="alertsList">
+	<div id="sortWrap">
+		{{>sorter}}
+	</div>
+	<div id="alertsWrap">
+		{{>alert}}
+	</div>
+</template>
+
+<template name="sorter">
+<input type="button" class="timeAsc" value="Time ↑">
+<input type="button" class="timeDsc" value="Time ↓">
+<input type="button" class="typeAsc" value="Type ↑">
+<input type="button" class="typeDsc" value="Type ↓">
+<input type="button" class="grpAsc" value="Group ↑">
+<input type="button" class="grpDsc" value="Group ↓">
+</template>
