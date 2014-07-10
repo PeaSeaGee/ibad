@@ -5,4 +5,9 @@ Template.alert.alerts = function() {
 
 Template.alert.strTime = function () {
 	return new Date(this.whenAlert).toString();
-}
+};
+/*
+Template.sorter.events({
+
+});
+*/

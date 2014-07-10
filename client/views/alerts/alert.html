@@ -1,15 +1,11 @@
 <template name="alert">
 	{{#each alerts}}
 	<div class="mmsalert" id="alert_{{_id}}">
-	<span class="onealerttext">Group {{group}} had alert of type {{type}} &mdash; {{strTime}}</span>
+	<span class="onealerttext">{{group}} had alert of type {{type}} &mdash; {{strTime}}</span>
 	<span class="onealertlinks">
 		<a href="https://mms.mongodb.com/backup/dashboard/{{mmsId}}">MMS</a> <a href="https://brsnoc.10gen.com/view_group?id={{mmsId}}">NOC</a> Comments
 		<input type="button" class="ack" id="btn_{{_id}}" value="Acknowledge">
 	</span>
 	</div>
 	{{/each}}
-</template>
-
-<template name="oneAlert">
-
 </template>
