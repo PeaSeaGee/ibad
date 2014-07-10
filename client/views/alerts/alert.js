@@ -6,6 +6,11 @@ Template.alert.alerts = function() {
 Template.alert.strTime = function () {
 	return new Date(this.whenAlert).toString();
 };
+
+Template.alert.comment = function() {
+	return this.comment;
+};
+
 /*
 Template.sorter.events({
 

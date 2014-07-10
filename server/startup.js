@@ -13,7 +13,9 @@ Meteor.startup(function () {
 				mmsId:"533850d5541410e80d3d0036",
 				whenAlert:new Date - 3600*Math.random(),
 				type:types[i],
-				commentCount:0,
+				comment:[{name: "peter", text: "comment 1", time: new Date()},
+							{name: "rassi", text: "comment2", time: new Date()}],
+				commentcount:0,
 				isAck:false
 			})
 		}

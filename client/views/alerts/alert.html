@@ -6,6 +6,18 @@
 		<a href="https://mms.mongodb.com/backup/dashboard/{{mmsId}}">MMS</a> <a href="https://brsnoc.10gen.com/view_group?id={{mmsId}}">NOC</a> Comments
 		<input type="button" class="ack" id="btn_{{_id}}" value="Acknowledge">
 	</span>
+	<div class="commentwrap">
+		{{#each comment}}
+		<div>
+			{{text}} --{{name}}
+		</div>
+		{{/each}}
+		<textarea placeholder="Name..." rows=1></textarea>
+		<br />
+		<textarea placeholder="Comment..."></textarea>
+		<br />
+		<input type="submit">
+	</div>
 	</div>
 	{{/each}}
 </template>
