@@ -1,22 +1,26 @@
 <template name="alert">
 	{{#each alerts}}
 	<div class="mmsalert" id="alert_{{_id}}">
-	<span class="onealerttext">{{group}} had alert of type {{type}} &mdash; {{strTime}}</span>
+	<span class="onealerttext">{{group}} had alert of type {{type}} &mdash; {{time}}</span>
 	<span class="onealertlinks">
-		<a href="https://mms.mongodb.com/backup/dashboard/{{mmsId}}">MMS</a> <a href="https://brsnoc.10gen.com/view_group?id={{mmsId}}">NOC</a> Comments
-		<input type="button" class="ack" id="btn_{{_id}}" value="Acknowledge">
+		<a href="https://mms.mongodb.com/backup/dashboard/{{mmsId}}">MMS</a> 
+		<a href="https://brsnoc.10gen.com/view_group?id={{mmsId}}">NOC</a> 
+		Comments
+		{{>ack}}
 	</span>
 	<div class="commentwrap">
 		{{#each comment}}
 		<div>
-			{{text}} --{{name}}
+			{{text}} &mdash;{{name}} @ {{time}}
 		</div>
 		{{/each}}
-		<textarea placeholder="Name..." rows=1></textarea>
-		<br />
-		<textarea placeholder="Comment..."></textarea>
-		<br />
-		<input type="submit">
+		<form id={{_id}}>
+			<textarea id="name" placeholder="Name..." rows="1"></textarea>
+			<br />
+			<textarea id="text" placeholder="Comment..."></textarea>
+			<br />
+			<input type="submit">
+		</form>
 	</div>
 	</div>
 	{{/each}}

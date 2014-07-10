@@ -1,0 +1,8 @@
+<template name="ack">
+	{{#if AckStr "false"}}
+		<input type="button" class="ack" id="btn_{{_id}}" value="Acknowledge">
+	{{/if}}
+	{{#if AckStr "true"}}
+		<input type="button" class="unack" id="btn_{{_id}}" value="Unacknowledge">
+	{{/if}}
+</template>
