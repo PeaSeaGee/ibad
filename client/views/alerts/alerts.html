@@ -1,4 +1,5 @@
 <template name="alert">
+	{{#each alerts}}
 	<div class="alert {{_id}}" id="alert">
 	<span class="alert text">Group {{group}} had alert of type {{type}} at {{whenAlert}}</span>
 	<span class="alert links">
@@ -6,4 +7,9 @@
 		<input type="button" class="ack" id="{{_id}}" value="Acknowledge">
 	</span>
 	</div>
+	{{/each}}
+</template>
+
+<template name="oneAlert">
+
 </template>
