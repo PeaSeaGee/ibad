@@ -15,9 +15,9 @@
 		</div>
 		{{/each}}
 		<div>
-			<textarea id="alert_{{_id}}_comment_name" class="comment_name" placeholder="Name..." rows="1"></textarea>
+			<input type="text" id="alert_{{_id}}_comment_name" class="comment_name" placeholder="Name..." rows="1" />
 			<br />
-			<textarea id="alert_{{_id}}_comment_text" class="comment_text" placeholder="Comment..."></textarea>
+			<textarea id="alert_{{_id}}_comment_text" class="comment_text" placeholder="Comment... (HTML will be stripped)"></textarea>
 			<br />
 			<input class="post_comment" type="button" value="Post" />
 		</div>

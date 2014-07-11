@@ -49,7 +49,9 @@ Template.alert.events({
 	'click input.post_comment': function() {
 	  var comment_name_elt = document.getElementById("alert_" + this._id + "_comment_name");
 	  var comment_text_elt = document.getElementById("alert_" + this._id + "_comment_text");
-		var comment = {text: comment_text_elt.value, name: comment_name_elt.value, time: new Date()};
+	  var comment_name_clean = comment_name_elt.value.replace(/<(?:.|\n)*?>/gm, '')
+	  var comment_text_clean = comment_text_elt.value.replace(/<(?:.|\n)*?>/gm, '')
+		var comment = {text: comment_text_clean, name: comment_name_clean, time: new Date()};
 		comment_name_elt.value = '';
 		comment_text_elt.value = '';
 		Alerts.update({_id:this._id},{$push:{comment: comment}});
