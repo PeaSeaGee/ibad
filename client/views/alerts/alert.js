@@ -31,8 +31,13 @@ Template.alert.alerts = function() {
 	return answer;
 };
 
-Template.alert.strTime = function () {
-	return new Date(this.whenAlert).toString();
+Template.alert.urlText = function (urlText) {
+	if ( (/^http/.test(this.text) && !(/\s/.test(this.text) ) ) )
+		urlText='<a href="' + this.text +'">' + this.text + '</a>';
+	else 
+		urlText=this.text;
+	
+	return urlText;
 };
 
 Template.alert.comment = function() {

@@ -11,13 +11,13 @@
 	<div class="commentwrap" id="comments_{{this._id}}">
 		{{#each comment}}
 		<div class="onecomment">
-			{{text}} &mdash;{{name}} @ {{time}}
+			{{{urlText}}} &mdash;{{name}} @ {{time}}
 		</div>
 		{{/each}}
 		<div>
 			<input type="text" id="alert_{{_id}}_comment_name" class="comment_name" placeholder="Name..." rows="1" />
 			<br />
-			<textarea id="alert_{{_id}}_comment_text" class="comment_text" placeholder="Comment... (HTML will be stripped)"></textarea>
+			<textarea id="alert_{{_id}}_comment_text" class="comment_text" placeholder="Comment... (make links by entering only an URL)"></textarea>
 			<br />
 			<input class="post_comment" type="button" value="Post" />
 		</div>
