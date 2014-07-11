@@ -16,11 +16,13 @@
 </body>
 
 <template name="sorter">
-<input type="button" class="timeAsc" value="Time ↑">
-<input type="button" class="timeDsc" value="Time ↓">
-<input type="button" class="typeAsc" value="Type ↑">
-<input type="button" class="typeDsc" value="Type ↓">
-<input type="button" class="grpAsc" value="Group ↑">
-<input type="button" class="grpDsc" value="Group ↓">
+<div id="wrapper to make meteor happy">
+<input type="button" id="timeAsc" value="Time ↑" class="sortButton">
+<input type="button" id="timeDsc" value="Time ↓" class="sortButton" style="background:#dfd">
+<input type="button" id="typeAsc" value="Type ↑" class="sortButton">
+<input type="button" id="typeDsc" value="Type ↓" class="sortButton">
+<input type="button" id="grpAsc" value="Group ↑" class="sortButton">
+<input type="button" id="grpDsc" value="Group ↓" class="sortButton">
 <input type="checkbox" class="showAck" id="showAck"> Show Acknowledged
+</div>
 </template>

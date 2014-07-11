@@ -30,3 +30,6 @@ body{
 
 #sortWrap { padding: 10px; }
 
+.active {
+	background: #FFF;
+}

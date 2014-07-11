@@ -71,25 +71,37 @@ Template.alert.events({
 });
 
 Template.sorter.events({
-	'click input.timeAsc': function(){
+	'click #timeAsc': function(){
 		Session.set("orderby","timeAsc");
+		$('input[type=button]').css("background", "");
+		document.getElementById("timeAsc").style["background"]="#dfd";
 	},
-	'click input.timeDsc': function(){
+	'click #timeDsc': function(){
 		Session.set("orderby","timeDsc");
+		$('input[type=button]').css("background", "");
+		document.getElementById("timeDsc").style["background"]="#dfd";
 	},
-	'click input.typeAsc': function(){
+	'click #typeAsc': function(){
 		Session.set("orderby","typeAsc");
+		$('input[type=button]').css("background", "");
+		document.getElementById("typeAsc").style["background"]="#dfd";
 	},
-	'click input.typeDsc': function(){
+	'click #typeDsc': function(){
 		Session.set("orderby","typeDsc");
+		$('input[type=button]').css("background", "");
+		document.getElementById("typeDsc").style["background"]="#dfd";
 	},
-	'click input.grpAsc': function(){
+	'click #grpAsc': function(){
 		Session.set("orderby","grpAsc");
+		$('input[type=button]').css("background", "");
+		document.getElementById("grpAsc").style["background"]="#dfd";
 	},
-	'click input.grpDsc': function(){
+	'click #grpDsc': function(){
 		Session.set("orderby","grpDsc");
+		$('input[type=button]').css("background", "");
+		document.getElementById("grpDsc").style["background"]="#dfd";
 	},
-	'click input.showAck': function(){
+	'click #showAck': function(){
 		showAckE = document.getElementById("showAck");
 		if (showAckE.checked)
 			Session.set("showAck", true);
