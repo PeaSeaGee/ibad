@@ -1,28 +1,31 @@
 Template.alert.alerts = function() {
 	if (Session.get("orderby")===null)
-		Session.set("orderby", "timeDsc")
+		Session.set("orderby", "timeDsc");
+	if (Session.get("showAck")===null)
+		Session.set("showAck", false);
+	showAck = Session.get("showAck");
 	switch (Session.get("orderby")) {
 		case "timeAsc":
-			answer = Alerts.find({isAck:false},{sort:{time:1}});
+			answer = Alerts.find({isAck:showAck},{sort:{time:1}});
 			break;
 		case "timeDsc":
-			answer = Alerts.find({isAck:false},{sort:{time:-1}});
+			answer = Alerts.find({isAck:showAck},{sort:{time:-1}});
 			break;
 		case "grpAsc":
-			answer = Alerts.find({isAck:false},{sort:{group:1}});
+			answer = Alerts.find({isAck:showAck},{sort:{group:1}});
 			break;
 		case "grpDsc":
-			answer = Alerts.find({isAck:false},{sort:{group:-1}});
+			answer = Alerts.find({isAck:showAck},{sort:{group:-1}});
 			break;
 		case "typeAsc":
-			answer = Alerts.find({isAck:false},{sort:{type:1}});
+			answer = Alerts.find({isAck:showAck},{sort:{type:1}});
 			break;
 		case "typeDsc":
-			answer = Alerts.find({isAck:false},{sort:{type:-1}});
+			answer = Alerts.find({isAck:showAck},{sort:{type:-1}});
 			break;
 		default:
 			Session.set("orderby", "timeDsc");
-			answer = Alerts.find({isAck:false},{sort:{time:-1}});
+			answer = Alerts.find({isAck:showAck},{sort:{time:-1}});
 			break;
 		}
 	return answer;
@@ -78,6 +81,13 @@ Template.sorter.events({
 	},
 	'click input.grpDsc': function(){
 		Session.set("orderby","grpDsc");
+	},
+	'click input.showAck': function(){
+		showAckE = document.getElementById("showAck");
+		if (showAckE.checked)
+			Session.set("showAck", true);
+		else
+			Session.set("showAck", false);
 	}
 });
 
