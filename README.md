@@ -3,6 +3,8 @@ ibad
 
 MMS Internal Backup Alert Dashboard
 
+Currently hosted at http://ibad-skunk.meteor.com
+
 Currently this is a fairly dumb dashboard with the following features:
 * Acknowledge/unacknowledge alerts to hide them from the main page
 * Ability to see and unacknowledge acknowledged alerts
