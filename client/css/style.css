@@ -23,5 +23,10 @@ body{
 	display:none;
 }
 
+.onecomment {
+	border-left: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+
 #sortWrap { padding: 10px; }
 

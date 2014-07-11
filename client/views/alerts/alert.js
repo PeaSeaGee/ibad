@@ -1,7 +1,7 @@
 Template.alert.alerts = function() {
-	if (Session.get("orderby")===null)
+	if (Session.get("orderby")===undefined)
 		Session.set("orderby", "timeDsc");
-	if (Session.get("showAck")===null)
+	if (Session.get("showAck")===undefined)
 		Session.set("showAck", false);
 	showAck = Session.get("showAck");
 	switch (Session.get("orderby")) {
