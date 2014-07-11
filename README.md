@@ -8,9 +8,9 @@ Currently this is a fairly dumb dashboard with the following features:
 * Ability to see and unacknowledge acknowledged alerts
 * Sort different ways, and the sorting is indicated by "radio button"-like behaviors
 * Leaving comments
-** Features HTML stripping
-** Turns "naked URL" comments into links (comment must have no other text)
-** Commentors have names.
+  * Features HTML stripping
+  * Turns "naked URL" comments into links (comment must have no other text)
+  * Commentors have names.
 * Links to BRS NOC and MMS Backup Dashboard by MMS group ID
 
 As this leverages Meteor, we get the following for free:
